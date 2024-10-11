@@ -1,10 +1,8 @@
-/* From Uiverse.io by alexruix */
 .group {
   display: flex;
   line-height: 28px;
   align-items: center;
   position: relative;
-  /* max-width: 190px; */
   padding-top: 20px;
 }
 
@@ -33,7 +31,6 @@
 input:hover {
   outline: none;
   border-color: rgba(148, 135, 140, 0.4);
-  /* background-color: #fff; */
   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
 }
 
