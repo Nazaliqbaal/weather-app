@@ -11,7 +11,7 @@ import LocationList from "./components/LocationList";
 import { dayNames } from "./constants/constant";
 import WeatherBriefInfo from "./components/WeatherBriefInfo";
 import WeatherDetails from "./components/WeatherDetails";
-import WeatherHourly from "./components/WeaterHourly";
+import WeatherHourly from "./components/HourlyForecast";
 import DailyForecast from "./components/DailyForecast";
 
 function App() {
