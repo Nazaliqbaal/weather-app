@@ -1,23 +1,25 @@
-// export function getWeather() {
-//   return fetch(
-//     "https://api.weatherapi.com/v1/current.json?q=new%delhi&key=4967f614a8234f9eaf775428240610"
-//   ).then((res) => res.json());
-// }
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+const baseUrl = "https://api.weatherapi.com/v1/forecast.json";
+
+const fetchWeatherData = async (endpoint) => {
+  const response = await fetch(endpoint);
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.json();
+};
 
 export function getWeatherForecast(selectedLocation = "Kasaragod") {
-  return fetch(
-    `https://api.weatherapi.com/v1/forecast.json?q=${selectedLocation}&key=4967f614a8234f9eaf775428240610`
-  ).then((res) => res.json());
+  const endpoint = `${baseUrl}?q=${selectedLocation}&key=${apiKey}`;
+  return fetchWeatherData(endpoint);
 }
 
 export function getTenDayWeatherForecast(location = "Kasaragod") {
-  return fetch(
-    `https://api.weatherapi.com/v1/forecast.json?q=${location}&days=10&&key=4967f614a8234f9eaf775428240610`
-  ).then((res) => res.json());
+  const endpoint = `${baseUrl}?q=${location}&days=10&key=${apiKey}`;
+  return fetchWeatherData(endpoint);
 }
 
 export function searchCity(location) {
-  return fetch(
-    `https://api.weatherapi.com/v1/search.json?q=${location}&key=4967f614a8234f9eaf775428240610`
-  ).then((res) => res.json());
+  const endpoint = `https://api.weatherapi.com/v1/search.json?q=${location}&key=${apiKey}`;
+  return fetchWeatherData(endpoint);
 }
