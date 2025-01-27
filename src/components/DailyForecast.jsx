@@ -3,8 +3,6 @@ import { Calendar } from "lucide-react";
 import { dayNames } from "../constants/constant";
 
 const DailyForecast = ({ weatherData }) => {
-  console.log(weatherData);
-
   const getFormattedDay = (date) => {
     const dateForm = new Date(date);
     const formattedDayIndex = dateForm.getDay();
@@ -15,7 +13,7 @@ const DailyForecast = ({ weatherData }) => {
     <div className="text-white bg-[#16161f] my-5 rounded-md">
       <div className="flex gap-2 px-5 py-4 text-sm items-center">
         <Calendar stroke="#333349" width={28} />
-        NEXT {weatherData.length} - DAY FORECAST
+        FORECAST FOR THE NEXT {weatherData?.length} - DAY(S)
       </div>
       <hr className="h-px bg-[#3d3d46] border-0" />
       {weatherData?.map((res) => (
