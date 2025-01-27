@@ -17,7 +17,7 @@ const WeatherHourly = ({ weatherData }) => {
   return (
     <div className="text-white bg-[#16161f] my-5 rounded-md ">
       <div className="flex gap-2 px-5 py-4 text-sm items-center">
-        <Clock stroke="#333349" width={28} /> HOURLY FORECAST
+        <Clock stroke="#333349" width={28} /> HOURLY FORECAST FOR THE DAY
       </div>
       <hr className="h-px bg-[#3d3d46] border-0 " />
       <div className="flex gap-3 justify-evenly flex-wrap px-4">
